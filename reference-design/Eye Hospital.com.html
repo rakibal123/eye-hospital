@@ -11,7 +11,8 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*:before,*:after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
 a{color:inherit;text-decoration:none}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+input,select,textarea{outline:none}input:focus,select:focus,textarea:focus,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:none;box-shadow:none}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 .eyebrow{font-size:11px;font-weight:600;color:var(--teal);letter-spacing:.06em;margin:0 0 6px}
 h1,h2,h3,p{margin:0}
@@ -104,7 +105,8 @@ nav ul a:hover{color:var(--ink)}
 form{background:#fff;border-radius:12px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px;color:#12324a}
 form h3{grid-column:1/-1;font-size:16px;margin-bottom:4px}
 form label{display:grid;gap:4px;font-size:11px;color:#5d7487}
-form input,form select{width:100%;border:1px solid #dbe7f1;border-radius:6px;padding:9px 10px;font:13px Inter,system-ui,sans-serif;background:#fff;color:#12324a}
+form input,form select{width:100%;border:1px solid #dbe7f1;border-radius:6px;padding:9px 10px;font:13px Inter,system-ui,sans-serif;background:#fff;color:#12324a;outline:none}
+form input:focus,form select:focus,form input:focus-visible,form select:focus-visible{outline:none;border-color:#dbe7f1;box-shadow:none}
 form .full{grid-column:1/-1}
 form .btn{width:100%;justify-content:center}
 /* contact */

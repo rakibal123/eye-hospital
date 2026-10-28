@@ -40,9 +40,19 @@ a {
   text-decoration: none;
 }
 
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+a:focus-visible, button:focus-visible {
   outline: 2px solid var(--teal);
   outline-offset: 2px;
+}
+
+input, select, textarea {
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 .wrap {
@@ -690,16 +700,25 @@ form input, form select {
   font: 13px 'Inter', system-ui, sans-serif;
   background: #fff;
   color: #12324a;
-  transition: border-color .15s, box-shadow .15s;
+  outline: none;
 }
 
-form input:focus, form select:focus {
-  border-color: var(--teal);
-  box-shadow: 0 0 0 2px rgba(31, 181, 163, 0.2);
+form input:focus, form select:focus,
+form input:focus-visible, form select:focus-visible {
+  outline: none;
+  border-color: #dbe7f1;
+  box-shadow: none;
 }
 
 form input.error, form select.error {
   border-color: #ef4444;
+}
+
+form input.error:focus, form select.error:focus,
+form input.error:focus-visible, form select.error:focus-visible {
+  outline: none;
+  border-color: #ef4444;
+  box-shadow: none;
 }
 
 form .error-text {
